@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Late Night Grooves — винил и джаз</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="logo">
+        <img src="images/logo.jpg" alt="Late Night Grooves" class="logo__img">
+        <span class="logo__text">Late Night Grooves</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#catalog" class="nav__link">Пластинки</a>
+        <a href="#about" class="nav__link">О магазине</a>
+        <a href="#contacts" class="nav__link">Связаться</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
+          <img src="images/sun.png" alt="" class="icon icon--moon">
+          <img src="images/moon.png" alt="" class="icon icon--sun">
+        </button>
+
+        <button class="cart-btn" type="button" aria-label="Корзина">
+          <img src="images/basket.png" alt="" class="icon">
+          <span class="cart-btn__count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Late Night Grooves</h1>
+      <p class="hero__slogan">Spin the Night</p>
+      <p class="hero__sub">The Warmth of Midnight Sound</p>
+      <a href="#catalog" class="hero__btn">К новинкам</a>
+    </div>
+  </section>
+
+  <section class="catalog-section" id="catalog">
+    <div class="catalog-layout">
+
+      <button class="filters-toggle" id="filtersToggle" type="button">
+        Фильтры
+      </button>
+
+      <div class="filters-overlay" id="filtersOverlay"></div>
+
+      <div class="catalog-visual">
+        <img src="images/left.jpg" alt="" class="catalog-visual__img">
+        <div class="catalog-visual__overlay"></div>
+
+        <aside class="filters" id="filters">
+          <button class="filters__close" id="filtersClose" type="button" aria-label="Закрыть фильтры">×</button>
+          <h3 class="filters__title">Фильтры</h3>
+
+          <fieldset class="filter-group">
+            <legend class="filter-group__legend">Жанр</legend>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Rock</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Pop</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Indie</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Punk</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Electronic</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend class="filter-group__legend">Десятилетие</legend>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">1970-е</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">1980-е</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">1990-е</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">2000-е</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Наше время</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend class="filter-group__legend">Состояние</legend>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Mint</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">Near Mint</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">VG+</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend class="filter-group__legend">Формат</legend>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">LP</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__label">EP</span>
+            </label>
+          </fieldset>
+        </aside>
+      </div>
+
+      <div class="catalog-content">
+        <h2 class="catalog__title">Каталог пластинок</h2>
+
+        <form class="search" role="search">
+          <input type="search" class="search__input" placeholder="Поиск пластинок, исполнителей...">
+        </form>
+
+        <div class="catalog__grid">
+
+          <article class="card" data-audio="audio/mj-thriller.mp3">
+            <div class="card__media">
+              <img src="images/thriller.webp" alt="Thriller" class="card__img">
+              <span class="card__badge">Classic</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Thriller</h3>
+              <p class="card__artist">Michael Jackson</p>
+              <p class="card__meta">Pop · LP · 1982</p>
+              <div class="card__footer">
+                <span class="card__price">18 400₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card" data-audio="audio/artic-monkeys-am.mp3">
+            <div class="card__media">
+              <img src="images/am.webp" alt="AM" class="card__img">
+              <span class="card__badge">Limited</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">AM</h3>
+              <p class="card__artist">Arctic Monkeys</p>
+              <p class="card__meta">Indie Rock · LP · 2013</p>
+              <div class="card__footer">
+                <span class="card__price">8 800₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card" data-audio="audio/beatles-abbey-road.mp3">
+            <div class="card__media">
+              <img src="images/abbey-road.webp" alt="Abbey Road" class="card__img">
+              <span class="card__badge">Classic</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Abbey Road</h3>
+              <p class="card__artist">The Beatles</p>
+              <p class="card__meta">Rock · LP · 1969</p>
+              <div class="card__footer">
+                <span class="card__price">9 100₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card" data-audio="audio/green-day-american-idiot.mp3">
+            <div class="card__media">
+              <img src="images/american-idiot.webp" alt="American Idiot" class="card__img">
+              <span class="card__badge">Bestseller</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">American Idiot</h3>
+              <p class="card__artist">Green Day</p>
+              <p class="card__meta">Punk Rock · LP · 2004</p>
+              <div class="card__footer">
+                <span class="card__price">6 900₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card" data-audio="audio/mcr-black-parade.mp3">
+            <div class="card__media">
+              <img src="images/black-parade.webp" alt="The Black Parade" class="card__img">
+              <span class="card__badge">Limited</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">The Black Parade</h3>
+              <p class="card__artist">My Chemical Romance</p>
+              <p class="card__meta">Emo Rock · LP · 2006</p>
+              <div class="card__footer">
+                <span class="card__price">7 900₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card" data-audio="audio/kiss-dynasty.mp3">
+            <div class="card__media">
+              <img src="images/dynasty.webp" alt="Destroyer" class="card__img">
+              <span class="card__badge">Classic</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Dynasty</h3>
+              <p class="card__artist">KISS</p>
+              <p class="card__meta">Hard Rock · LP · 1979</p>
+              <div class="card__footer">
+                <span class="card__price">16 400₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card" data-audio="audio/depeche-mode-violator.mp3">
+            <div class="card__media">
+              <img src="images/violator.jpg" alt="Violator" class="card__img">
+              <span class="card__badge">Bestseller</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Violator</h3>
+              <p class="card__artist">Depeche Mode</p>
+              <p class="card__meta">Synth-pop · LP · 1990</p>
+              <div class="card__footer">
+                <span class="card__price">19 300 ₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="card" data-audio="audio/acdc-back-in-black.mp3">
+            <div class="card__media">
+              <img src="images/back-in-black.webp" alt="Back in Black" class="card__img">
+              <span class="card__badge">Classic</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Back in Black</h3>
+              <p class="card__artist">AC/DC</p>
+              <p class="card__meta">Hard Rock · LP · 1980</p>
+              <div class="card__footer">
+                <span class="card__price">15 900 ₽</span>
+                <button class="card__btn card__btn--cart" type="button">В корзину</button>
+              </div>
+              <button class="card__spin" type="button">
+                <img src="images/play.png" alt="" class="card__spin-icon">
+                <span class="card__spin-text">Spin the Night</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="feature" id="about">
+    <div class="feature__inner">
+
+      <div class="feature__content">
+        <h2 class="feature__title">О магазине</h2>
+        <p class="feature__text">
+          Late Night Grooves — это не просто магазин. Это место, где винил живёт своей жизнью,
+          а каждый вечер превращается в маленький джазовый концерт. Мы собираем пластинки
+          с любовью, чтобы ты мог найти ту самую, которая станет твоим ночным саундтреком.
+        </p>
+        <p class="feature__text">
+          Заходи, ставь иглу, слушай.
+        </p>
+        <div class="feature__stats">
+          <div class="feature__stat">
+            <span class="feature__stat-num">2019</span>
+            <span class="feature__stat-label">год основания</span>
+          </div>
+          <div class="feature__stat">
+            <span class="feature__stat-num">3000+</span>
+            <span class="feature__stat-label">пластинок в наличии</span>
+          </div>
+          <div class="feature__stat">
+            <span class="feature__stat-num">∞</span>
+            <span class="feature__stat-label">вечеров с вашей любимой музыкой</span>
+          </div>
+        </div>
+        <a href="#catalog" class="feature__btn">Смотреть каталог</a>
+      </div>
+
+      <div class="feature__visual">
+        <img src="images/right.jpg" alt="" class="feature__img">
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <img src="images/logo.jpg" alt="Late Night Grooves" class="footer__logo">
+        <p class="footer__text">The Warmth of Midnight Sound</p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title">Каталог</h3>
+        <ul class="footer__list">
+          <li><a href="#">Новинки</a></li>
+          <li><a href="#">Джаз</a></li>
+          <li><a href="#">Блюз</a></li>
+          <li><a href="#">Соул</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title">Контакты</h3>
+        <ul class="footer__list">
+          <li><a href="#">О магазине</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Связаться</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__copy">© 2026 Late Night Grooves. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
